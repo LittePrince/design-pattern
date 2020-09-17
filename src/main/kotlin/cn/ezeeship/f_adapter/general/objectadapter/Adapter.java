@@ -1,0 +1,14 @@
+package cn.ezeeship.f_adapter.general.objectadapter;
+
+/**
+ * lxc
+ */
+public class Adapter implements Target {
+    private Adaptee adaptee;
+    public Adapter(Adaptee adaptee){
+        this.adaptee = adaptee;
+    }
+    public int request() {
+        return adaptee.specificRequest() / 10;
+    }
+}
